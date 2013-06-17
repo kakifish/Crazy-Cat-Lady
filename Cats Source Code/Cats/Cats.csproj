@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B8B9A4CA-804D-4057-951D-06E9A5736B3D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cats</RootNamespace>
+    <AssemblyName>Cats</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AddCat.aspx" />
+    <Content Include="AddSpecifications.aspx" />
+    <Content Include="CatPictures\catNotFound.jpg" />
+    <Content Include="Forum.aspx" />
+    <Content Include="HowToTreat.aspx" />
+    <Content Include="ListOfBreeds.aspx" />
+    <Content Include="ReadOnWiki.aspx" />
+    <Content Include="Scripts\DynamicTextArea.js" />
+    <Content Include="SearchBreed.aspx" />
+    <Content Include="CatPictures\Abyssinian.jpg" />
+    <Content Include="CatPictures\Aegean cat.jpg" />
+    <Content Include="CatPictures\American Bobtail.jpg" />
+    <Content Include="CatPictures\American Curl.jpg" />
+    <Content Include="CatPictures\American Polydactyl.jpg" />
+    <Content Include="CatPictures\American Shorthair.jpg" />
+    <Content Include="CatPictures\American Wirehair.jpg" />
+    <Content Include="CatPictures\Arabian Mau.JPG" />
+    <Content Include="CatPictures\Asian Semi-longhair.JPG" />
+    <Content Include="CatPictures\Asian.jpg" />
+    <Content Include="CatPictures\Australian Mist.jpg" />
+    <Content Include="CatPictures\Balinese.jpg" />
+    <Content Include="CatPictures\Bengal.jpg" />
+    <Content Include="CatPictures\Birman.jpg" />
+    <Content Include="CatPictures\Bombay.jpg" />
+    <Content Include="CatPictures\Brazilian Shorthair.JPG" />
+    <Content Include="CatPictures\British Longhair.jpg" />
+    <Content Include="CatPictures\British Shorthair.jpg" />
+    <Content Include="CatPictures\Burmese.jpg" />
+    <Content Include="CatPictures\Burmilla.jpeg" />
+    <Content Include="CatPictures\California Spangled Cat.jpg" />
+    <Content Include="CatPictures\Chartreux.jpg" />
+    <Content Include="CatPictures\Chausie.jpg" />
+    <Content Include="CatPictures\Colorpoint Shorthair.jpg" />
+    <Content Include="CatPictures\Cornish Rex.JPG" />
+    <Content Include="CatPictures\Cymric.JPG" />
+    <Content Include="CatPictures\Devon Rex.jpg" />
+    <Content Include="CatPictures\Donskoy or Don Sphynx.JPG" />
+    <Content Include="CatPictures\Dragon Li.jpg" />
+    <Content Include="CatPictures\Egyptian Mau.jpg" />
+    <Content Include="CatPictures\European Shorthair.jpg" />
+    <Content Include="CatPictures\Exotic Shorthair.jpg" />
+    <Content Include="CatPictures\German Rex.jpg" />
+    <Content Include="CatPictures\Havana Brown.jpg" />
+    <Content Include="CatPictures\Himalayan or Colorpoint Persian.jpg" />
+    <Content Include="CatPictures\Japanese Bobtail.JPG" />
+    <Content Include="CatPictures\Javanese.jpg" />
+    <Content Include="CatPictures\Korat.JPG" />
+    <Content Include="CatPictures\Kurilian Bobtail.JPG" />
+    <Content Include="CatPictures\LaPerm.jpg" />
+    <Content Include="CatPictures\Maine Coon.jpg" />
+    <Content Include="CatPictures\Manx.jpg" />
+    <Content Include="CatPictures\Mekong bobtail.jpg" />
+    <Content Include="CatPictures\Munchkin.jpg" />
+    <Content Include="CatPictures\Nebelung.JPG" />
+    <Content Include="CatPictures\Norwegian Forest Cat.JPG" />
+    <Content Include="CatPictures\Ocicat.jpg" />
+    <Content Include="CatPictures\Oriental Bicolor.jpg" />
+    <Content Include="CatPictures\Oriental Longhair.jpg" />
+    <Content Include="CatPictures\Persian.jpg" />
+    <Content Include="CatPictures\Peterbald.jpg" />
+    <Content Include="CatPictures\Pixie-bob.jpg" />
+    <Content Include="CatPictures\Ragamuffin.jpg" />
+    <Content Include="CatPictures\Ragdoll.jpg" />
+    <Content Include="CatPictures\Russian Blue.gif" />
+    <Content Include="CatPictures\Savannah.jpg" />
+    <Content Include="CatPictures\Scottish Fold.jpg" />
+    <Content Include="CatPictures\Selkirk Rex.jpg" />
+    <Content Include="CatPictures\Serengeti cat.jpg" />
+    <Content Include="CatPictures\Siamese.jpg" />
+    <Content Include="CatPictures\Siberian.jpg" />
+    <Content Include="CatPictures\Singapura.jpg" />
+    <Content Include="CatPictures\Snowshoe.JPG" />
+    <Content Include="CatPictures\Sokoke.jpg" />
+    <Content Include="CatPictures\Somali.jpg" />
+    <Content Include="CatPictures\Sphinx.jpg" />
+    <Content Include="CatPictures\Thai.JPG" />
+    <Content Include="CatPictures\Tonkinese.gif" />
+    <Content Include="CatPictures\Toyger.JPG" />
+    <Content Include="CatPictures\Turkish Angora.jpg" />
+    <Content Include="CatPictures\Turkish Van.jpg" />
+    <Content Include="CatPictures\Ukrainian Levkoy.jpg" />
+    <Content Include="CatPictures\York Chocolate Cat.jpg" />
+    <Content Include="Styles\MasterStyleSheet.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddCat.aspx.cs">
+      <DependentUpon>AddCat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddCat.aspx.designer.cs">
+      <DependentUpon>AddCat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddSpecifications.aspx.cs">
+      <DependentUpon>AddSpecifications.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddSpecifications.aspx.designer.cs">
+      <DependentUpon>AddSpecifications.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cat.cs" />
+    <Compile Include="CatBL.cs" />
+    <Compile Include="CatsDAL.cs" />
+    <Compile Include="Forum.aspx.cs">
+      <DependentUpon>Forum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forum.aspx.designer.cs">
+      <DependentUpon>Forum.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HowToTreat.aspx.cs">
+      <DependentUpon>HowToTreat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HowToTreat.aspx.designer.cs">
+      <DependentUpon>HowToTreat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReadOnWiki.aspx.cs">
+      <DependentUpon>ReadOnWiki.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReadOnWiki.aspx.designer.cs">
+      <DependentUpon>ReadOnWiki.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchBreed.aspx.cs">
+      <DependentUpon>SearchBreed.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchBreed.aspx.designer.cs">
+      <DependentUpon>SearchBreed.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListOfBreeds.aspx.cs">
+      <DependentUpon>ListOfBreeds.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListOfBreeds.aspx.designer.cs">
+      <DependentUpon>ListOfBreeds.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CatMenuItems\" />
+    <Folder Include="CodeFolder\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:14723/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,51 @@
+﻿<%@ Master AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Cats.Site" Language="C#"%>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="~/Styles/MasterStyleSheet.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head> 
+<body>
+    <form runat="server">
+        <div>
+            <div class="page">
+                <div class="header">
+                    <div class="title">
+                        <h1>
+                            <asp:ContentPlaceHolder ID="HeaderText" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </h1>
+                    </div>
+                </div>
+                <div class="clear hideSkiplink">
+                    <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal" OnMenuItemClick="NavigationMenu_MenuItemClick">
+                        <Items>
+                            <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" ToolTip="Press to go back to home page." />
+                            <asp:MenuItem NavigateUrl="~/ListOfBreeds.aspx" Text="List Of All Cat Breeds" ToolTip="Press to see the list of all cat breeds in our data base." />
+                            <asp:MenuItem NavigateUrl="~/SearchBreed.aspx" Text="Search For Cat Breed" ToolTip="Press to search for cat breed according his specifications." />
+                            <asp:MenuItem NavigateUrl="~/AddCat.aspx" Text="Add Cat" ToolTip="Press if you want to add a new cat breed." />
+                            <asp:MenuItem NavigateUrl="~/AddSpecifications.aspx" Text="Add/Change Cat Specifications" ToolTip="Press to add or change some cat breed specifications." />
+                            <asp:MenuItem NavigateUrl="~/HowToTreat.aspx" Text="How To Treat" ToolTip="Press to read how to treat cats." />
+                            <asp:MenuItem NavigateUrl="~/ReadOnWiki.aspx" Text="Read On Wikipedia" ToolTip="Press to read about a cat breed on Wikipedia web site." />
+                            <asp:MenuItem NavigateUrl="~/Forum.aspx" Text="Forum" ToolTip="Press to enter our forum." />
+                        </Items>
+                    </asp:Menu>
+                </div>
+                <div class="main">
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                        <asp:Image ID="Image1" runat="server" />
+                    </asp:ContentPlaceHolder>
+                    <br />
+                    <br />
+                </div>
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+    </form>
+</body>
+</html>
