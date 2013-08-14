@@ -128,22 +128,20 @@ namespace Cats.EditorFolder
                 var image = AllBreedGrid.Rows[index].Cells[7].Text.Trim();
                 var information = AllBreedGrid.Rows[index].Cells[6].Text.Trim();
 
-                var specifications = new string[7];
+                var specifications = new string[6];
                 specifications[0] = "Country";
                 specifications[1] = "Origin";
                 specifications[2] = "Body Type";
                 specifications[3] = "Coat";
                 specifications[4] = "Pattern";
                 specifications[5] = "Image";
-                specifications[6] = "Information";
-                var specificationsValues = new string[7];
+                var specificationsValues = new string[6];
                 specificationsValues[0] = country;
                 specificationsValues[1] = origin;
                 specificationsValues[2] = bodyType;
                 specificationsValues[3] = coat;
                 specificationsValues[4] = pattern;
                 specificationsValues[5] = image;
-                specificationsValues[6] = information;
                 if (e.CommandName == "ConfirmButton")
                 {
                     _userCatBL.AddSpecificationsToBreed(breed, specifications, specificationsValues);                    
