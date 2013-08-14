@@ -126,7 +126,6 @@ namespace Cats.EditorFolder
                 var coat = AllBreedGrid.Rows[index].Cells[4].Text.Trim();
                 var pattern = AllBreedGrid.Rows[index].Cells[5].Text.Trim();
                 var image = AllBreedGrid.Rows[index].Cells[7].Text.Trim();
-                var information = AllBreedGrid.Rows[index].Cells[6].Text.Trim();
 
                 var specifications = new string[6];
                 specifications[0] = "Country";
