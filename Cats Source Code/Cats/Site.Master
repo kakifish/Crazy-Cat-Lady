@@ -8,6 +8,11 @@
     <link href="~/Styles/MasterStyleSheet.css" rel="stylesheet" type="text/css" />
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">
     </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .menu {
+            direction: ltr;
+        }
+    </style>
 </head> 
 <body>
     <form runat="server">
@@ -22,16 +27,23 @@
                     </div>
                 </div>
                 <div class="clear hideSkiplink">
-                    <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal" OnMenuItemClick="NavigationMenu_MenuItemClick">
+                    <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
                         <Items>
                             <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" ToolTip="Press to go back to home page." />
-                            <asp:MenuItem NavigateUrl="~/ListOfBreeds.aspx" Text="List Of All Cat Breeds" ToolTip="Press to see the list of all cat breeds in our data base." />
-                            <asp:MenuItem NavigateUrl="~/SearchBreed.aspx" Text="Search For Cat Breed" ToolTip="Press to search for cat breed according his specifications." />
-                            <asp:MenuItem NavigateUrl="~/AddCat.aspx" Text="Add Cat" ToolTip="Press if you want to add a new cat breed." />
-                            <asp:MenuItem NavigateUrl="~/AddSpecifications.aspx" Text="Add/Change Cat Specifications" ToolTip="Press to add or change some cat breed specifications." />
-                            <asp:MenuItem NavigateUrl="~/HowToTreat.aspx" Text="How To Treat" ToolTip="Press to read how to treat cats." />
-                            <asp:MenuItem NavigateUrl="~/ReadOnWiki.aspx" Text="Read On Wikipedia" ToolTip="Press to read about a cat breed on Wikipedia web site." />
-                            <asp:MenuItem NavigateUrl="~/Forum.aspx" Text="Forum" ToolTip="Press to enter our forum." />
+                            <asp:MenuItem NavigateUrl="~/ListOfBreeds.aspx?admin=false" Text="List Of All Cat Breeds" ToolTip="Press to see the list of all cat breeds in our data base." />
+                            <asp:MenuItem NavigateUrl="~/SearchBreed.aspx?admin=false" Text="Search For Cat Breed" ToolTip="Press to search for cat breed according his specifications." />
+                            <asp:MenuItem NavigateUrl="~/AddCat.aspx?admin=false" Text="Add Cat" ToolTip="Press if you want to add a new cat breed." />
+                            <asp:MenuItem NavigateUrl="~/AddSpecifications.aspx?admin=false" Text="Add/Change Cat Specifications" ToolTip="Press to add or change some cat breed specifications." />
+                            <asp:MenuItem Text="Products" Value="Products" ToolTip="Choose a category products">
+                                <asp:MenuItem Text="Food" Value="Food">
+                                    <asp:MenuItem Text="Dry" Value="Dry" NavigateUrl="~/ProductsFolder/FoodPage.aspx?category=dry&amp;admin=false"></asp:MenuItem>
+                                    <asp:MenuItem Text="Wet" Value="Wet" NavigateUrl="~/ProductsFolder/FoodPage.aspx?category=wet&amp;admin=false"></asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem Text="Toys" Value="Toys" NavigateUrl="~/ProductsFolder/ToysTreatsAndVitamins.aspx?category=Toys&amp;admin=false"></asp:MenuItem>
+                                <asp:MenuItem Text="Treats" Value="Treats" NavigateUrl="~/ProductsFolder/ToysTreatsAndVitamins.aspx?category=Treats&amp;admin=false"></asp:MenuItem>
+                                <asp:MenuItem Text="Vitamins" Value="Vitamins" NavigateUrl="~/ProductsFolder/ToysTreatsAndVitamins.aspx?category=Vitamins&amp;admin=false"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/EditorFolder/LogIn.aspx" Text="Editor Log In" Value="Editor Log In" ToolTip="Editore can aprove changes that user had made"></asp:MenuItem>
                         </Items>
                     </asp:Menu>
                 </div>

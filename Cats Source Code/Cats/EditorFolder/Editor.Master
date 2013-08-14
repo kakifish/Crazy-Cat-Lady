@@ -1,0 +1,65 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Editor.master.cs" Inherits="Cats.Editor" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <link href="~/Styles/MasterStyleSheet.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .menu {
+            direction: ltr;
+        }
+    </style>
+</head> 
+<body>
+    <form id="Form1" runat="server">
+        <div>
+            <div class="page">
+                <div class="header">
+                    <div class="title">
+                        <h1>
+                            <asp:ContentPlaceHolder ID="HeaderText" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </h1>
+                    </div>
+                </div>
+                <div class="clear hideSkiplink">
+                    <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                        <Items>
+                            <asp:MenuItem NavigateUrl="~/EditorFolder/EditorsDefault.aspx" Text="Home" ToolTip="Press to go back to editors home page." />
+                            <asp:MenuItem NavigateUrl="~/ListOfBreeds.aspx?admin=true" Text="List Of All Cat Breeds" ToolTip="Press to see the list of all cat breeds in our data base." />
+                            <asp:MenuItem NavigateUrl="~/SearchBreed.aspx?admin=true" Text="Search For Cat Breed" ToolTip="Press to search for cat breed according his specifications." />
+                            <asp:MenuItem NavigateUrl="~/AddCat.aspx?admin=true" Text="Add Cat" ToolTip="Press if you want to add a new cat breed." />
+                            <asp:MenuItem NavigateUrl="~/AddSpecifications.aspx?admin=true" Text="Add/Change Cat Specifications" ToolTip="Press to add or change some cat breed specifications." />
+                            <asp:MenuItem Text="Products" Value="Products" ToolTip="Choose a category products">
+                                <asp:MenuItem Text="Food" Value="Food">
+                                    <asp:MenuItem Text="Dry" Value="Dry" NavigateUrl="~/ProductsFolder/FoodPage.aspx?category=dry&amp;admin=true"></asp:MenuItem>
+                                    <asp:MenuItem Text="Wet" Value="Wet" NavigateUrl="~/ProductsFolder/FoodPage.aspx?category=wet&amp;admin=true"></asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem Text="Toys" Value="Toys" NavigateUrl="~/ProductsFolder/ToysTreatsAndVitamins.aspx?category=Toys&amp;admin=true"></asp:MenuItem>
+                                <asp:MenuItem Text="Treats" Value="Treats" NavigateUrl="~/ProductsFolder/ToysTreatsAndVitamins.aspx?category=Treats&amp;admin=true"></asp:MenuItem>
+                                <asp:MenuItem Text="Vitamins" Value="Vitamins" NavigateUrl="~/ProductsFolder/ToysTreatsAndVitamins.aspx?category=Vitamins&amp;admin=true"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/EditorFolder/Changes.aspx" Text="Changes" Value="Changes" ToolTip="View changes that users had made"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/EditorFolder/DeleteCat.aspx" Text="Delete breed" Value="Delete Cat" ToolTip="Delete a breed from the cat list"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Back To Regular User" Value="Back To Regular User" ToolTip="Quit the editors mode and go back to the regular users site"></asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                </div>
+                <div class="main">
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                        <asp:Image ID="Image1" runat="server" />
+                    </asp:ContentPlaceHolder>
+                    <br />
+                    <br />
+                </div>
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+    </form>
+</body>
+</html>

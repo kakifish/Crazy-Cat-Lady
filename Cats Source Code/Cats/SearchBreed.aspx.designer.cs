@@ -22,13 +22,40 @@ namespace Cats {
         protected global::System.Web.UI.WebControls.GridView SearchCatGrid;
         
         /// <summary>
-        /// SearchForBreedName control.
+        /// NoBreedNameLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button SearchForBreedName;
+        protected global::System.Web.UI.WebControls.Label NoBreedNameLabel;
+        
+        /// <summary>
+        /// NoBodyTypeLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label NoBodyTypeLabel;
+        
+        /// <summary>
+        /// NoCoatLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label NoCoatLabel;
+        
+        /// <summary>
+        /// NoPatternLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label NoPatternLabel;
         
         /// <summary>
         /// SearchInformation control.
@@ -38,6 +65,24 @@ namespace Cats {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button SearchInformation;
+        
+        /// <summary>
+        /// SearchForBreedName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button SearchForBreedName;
+        
+        /// <summary>
+        /// WantedBreedGrid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView WantedBreedGrid;
         
         /// <summary>
         /// CatBreedName control.
@@ -58,13 +103,94 @@ namespace Cats {
         protected global::System.Web.UI.WebControls.Image CatImage;
         
         /// <summary>
-        /// CatText control.
+        /// LabelsTable control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea CatText;
+        protected global::System.Web.UI.HtmlControls.HtmlTable LabelsTable;
+        
+        /// <summary>
+        /// SpecificationsLable control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label SpecificationsLable;
+        
+        /// <summary>
+        /// CountryLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label CountryLabel;
+        
+        /// <summary>
+        /// OriginLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label OriginLabel;
+        
+        /// <summary>
+        /// BodyTypeLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label BodyTypeLabel;
+        
+        /// <summary>
+        /// CoatLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label CoatLabel;
+        
+        /// <summary>
+        /// PatternLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label PatternLabel;
+        
+        /// <summary>
+        /// tempDiv control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl tempDiv;
+        
+        /// <summary>
+        /// textDiv control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl textDiv;
+        
+        /// <summary>
+        /// EditTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox EditTextBox;
         
         /// <summary>
         /// EditTextButton control.
@@ -76,12 +202,12 @@ namespace Cats {
         protected global::System.Web.UI.WebControls.Button EditTextButton;
         
         /// <summary>
-        /// SubmitTextChangesButton control.
+        /// SubmitButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button SubmitTextChangesButton;
+        protected global::System.Web.UI.WebControls.Button SubmitButton;
     }
 }

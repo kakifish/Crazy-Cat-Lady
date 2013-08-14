@@ -5,4 +5,6 @@
     WelcomE To The Crazy-Cat-Lady Web Site
 </asp:Content>
 <asp:Content ID="main" ContentPlaceHolderID="MainContent" runat="server">
+    <p>
+        I NEED TO ADD HERE SOME INFORMATION!!!!!!!!!!!!!!!!!!</p>
 </asp:Content>

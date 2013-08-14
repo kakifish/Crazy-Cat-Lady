@@ -19,6 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -39,6 +40,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -48,6 +52,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -60,11 +65,25 @@
     <Content Include="AddCat.aspx" />
     <Content Include="AddSpecifications.aspx" />
     <Content Include="CatPictures\catNotFound.jpg" />
-    <Content Include="Forum.aspx" />
-    <Content Include="HowToTreat.aspx" />
+    <Content Include="CatPictures\catNotFoundSmall.jpg" />
+    <Content Include="EditorFolder\Changes.aspx" />
+    <Content Include="EditorFolder\DeleteCat.aspx" />
+    <Content Include="EditorFolder\EditorsDefault.aspx" />
+    <Content Include="EditorFolder\LogIn.aspx" />
+    <Content Include="EditorFolder\Register.aspx" />
     <Content Include="ListOfBreeds.aspx" />
-    <Content Include="ReadOnWiki.aspx" />
-    <Content Include="Scripts\DynamicTextArea.js" />
+    <Content Include="ProductsFolder\FoodPage.aspx" />
+    <Content Include="ProductsFolder\ProductsPictures\Food\Dry\11443557b.gif" />
+    <Content Include="ProductsFolder\ProductsPictures\Food\Dry\11443751b.gif" />
+    <Content Include="ProductsFolder\ProductsPictures\Food\Dry\11443753b.gif" />
+    <Content Include="ProductsFolder\ProductsPictures\Food\Dry\27759664b.gif" />
+    <Content Include="ProductsFolder\ProductsPictures\Food\Dry\35382155b.gif" />
+    <Content Include="ProductsFolder\ProductsPictures\Food\Wet\20520709b.gif" />
+    <Content Include="ProductsFolder\ProductsPictures\Food\Wet\34238792b.gif" />
+    <Content Include="ProductsFolder\ProductsPictures\Food\Wet\38238095b.gif" />
+    <Content Include="ProductsFolder\ProductsPictures\Toys\35650776b.gif" />
+    <Content Include="ProductsFolder\ProductsPictures\Toys\38429415b.gif" />
+    <Content Include="ProductsFolder\ToysTreatsAndVitamins.aspx" />
     <Content Include="SearchBreed.aspx" />
     <Content Include="CatPictures\Abyssinian.jpg" />
     <Content Include="CatPictures\Aegean cat.jpg" />
@@ -161,26 +180,68 @@
     <Compile Include="Cat.cs" />
     <Compile Include="CatBL.cs" />
     <Compile Include="CatsDAL.cs" />
-    <Compile Include="Forum.aspx.cs">
-      <DependentUpon>Forum.aspx</DependentUpon>
+    <Compile Include="EditorFolder\Changes.aspx.cs">
+      <DependentUpon>Changes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Forum.aspx.designer.cs">
-      <DependentUpon>Forum.aspx</DependentUpon>
+    <Compile Include="EditorFolder\Changes.aspx.designer.cs">
+      <DependentUpon>Changes.aspx</DependentUpon>
     </Compile>
-    <Compile Include="HowToTreat.aspx.cs">
-      <DependentUpon>HowToTreat.aspx</DependentUpon>
+    <Compile Include="EditorFolder\DeleteCat.aspx.cs">
+      <DependentUpon>DeleteCat.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="HowToTreat.aspx.designer.cs">
-      <DependentUpon>HowToTreat.aspx</DependentUpon>
+    <Compile Include="EditorFolder\DeleteCat.aspx.designer.cs">
+      <DependentUpon>DeleteCat.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ReadOnWiki.aspx.cs">
-      <DependentUpon>ReadOnWiki.aspx</DependentUpon>
+    <Compile Include="EditorFolder\Editor.cs" />
+    <Compile Include="EditorFolder\Editor.Master.cs">
+      <DependentUpon>Editor.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ReadOnWiki.aspx.designer.cs">
-      <DependentUpon>ReadOnWiki.aspx</DependentUpon>
+    <Compile Include="EditorFolder\Editor.Master.designer.cs">
+      <DependentUpon>Editor.Master</DependentUpon>
+    </Compile>
+    <Compile Include="EditorFolder\EditorBL.cs" />
+    <Compile Include="EditorFolder\EditorDAL.cs" />
+    <Compile Include="EditorFolder\EditorsDefault.aspx.cs">
+      <DependentUpon>EditorsDefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditorFolder\EditorsDefault.aspx.designer.cs">
+      <DependentUpon>EditorsDefault.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditorFolder\Extensions.cs" />
+    <Compile Include="EditorFolder\LogIn.aspx.cs">
+      <DependentUpon>LogIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditorFolder\LogIn.aspx.designer.cs">
+      <DependentUpon>LogIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditorFolder\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditorFolder\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductsFolder\FoodPage.aspx.cs">
+      <DependentUpon>FoodPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductsFolder\FoodPage.aspx.designer.cs">
+      <DependentUpon>FoodPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductsFolder\Product.cs" />
+    <Compile Include="ProductsFolder\ProductBL.cs" />
+    <Compile Include="ProductsFolder\ProductDAL.cs" />
+    <Compile Include="ProductsFolder\ToysTreatsAndVitamins.aspx.cs">
+      <DependentUpon>ToysTreatsAndVitamins.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductsFolder\ToysTreatsAndVitamins.aspx.designer.cs">
+      <DependentUpon>ToysTreatsAndVitamins.aspx</DependentUpon>
     </Compile>
     <Compile Include="SearchBreed.aspx.cs">
       <DependentUpon>SearchBreed.aspx</DependentUpon>
@@ -214,6 +275,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Site.Master" />
+    <Content Include="EditorFolder\Editor.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -223,7 +285,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CatMenuItems\" />
-    <Folder Include="CodeFolder\" />
+    <Folder Include="ProductsFolder\ProductsPictures\Treats\" />
+    <Folder Include="ProductsFolder\ProductsPictures\Vitamins\" />
+    <Folder Include="Scripts\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

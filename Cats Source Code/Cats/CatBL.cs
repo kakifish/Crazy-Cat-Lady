@@ -1,12 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace Cats
 {
     public class CatBL
     {
-        private readonly CatsDAL _catDal = new CatsDAL();
+        private readonly CatsDAL _catDal;
+        private readonly bool _admin;
+
+        public CatBL(bool admin)
+        {
+            _admin = admin;
+            _catDal = new CatsDAL(_admin);
+        }
 
         public Cat GetCat(string breed)
         {
@@ -18,15 +24,15 @@ namespace Cats
             return _catDal.GetCat(breed) != null;
         }
 
-        public Boolean AddCat(Cat cat)
+        public Boolean AddCat(Cat cat, string changes)
         {
-            var catBl = new CatBL();
-            if (!catBl.IsCatExist(cat.GetBreed().Trim()))
+            var catBl = new CatBL(_admin);
+            if (!_admin && catBl.IsCatExist(cat.GetBreed().Trim()))
             {
-                _catDal.AddCat(cat);
-                return true;
+                return false;
             }
-            return false;
+            _catDal.AddCat(cat, changes);
+            return true;
         }
 
         public LinkedList<Cat> GetAllCats()
@@ -59,8 +65,37 @@ namespace Cats
 
         public string FindCatImage(string breed)
         {
-            var imageList = GetListOfSpecification("Image");
-            return imageList.Where(image => image.Split('.')[0].Trim().Equals("~/CatPictures/" + breed)).Select(image => image.Trim()).FirstOrDefault();
+            return _catDal.GetBreedSpecification(breed, "Image");
+        }
+
+        public LinkedList<Cat> FindBreedBySpecifications(string[] specifications)
+        {
+            return _catDal.FindBreedBySpecifications(specifications);
+        }
+
+        public void DeleteCat(string breed)
+        {
+            _catDal.DeleteCat(breed);
+        }
+
+        public void DeleteCat(string breed, string specifications, string value)
+        {
+            _catDal.DeleteCat(breed, specifications, value);
+        }
+
+        public void AddChanges(string breed, string cahnges)
+        {
+            _catDal.AddChanges(breed, cahnges);
+        }
+
+        public void DeleteRow(int row)
+        {
+            _catDal.DeleteRow(row);
+        }
+
+        public LinkedList<Cat> GetAllCatsWithChanges()
+        {
+            return _catDal.GetAllCatsWithChanges();
         }
     }
 }

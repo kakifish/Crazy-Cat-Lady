@@ -37,7 +37,6 @@ p
 h1, h2, h3, h4, h5, h6 {
     font-size: 1.5em;
     color: #000000;
-    font-variant: small-caps;
     text-transform: none;
     font-weight: 200;
     margin-bottom: 0;
@@ -54,6 +53,7 @@ h1 {
     font-size: xx-large;
     font-weight: 600;
     color: #000000;
+    text-decoration: #000000;
 }
 
 h2 {
@@ -252,9 +252,19 @@ legend
     font-size: large;
 }
 
-/* Text Area
+/* Specification Labels
 ----------------------------------------------------------*/
 
-.textarea{
-        overflow: hidden;
+.specificationsLabelsTable {
+    width: 100%;
+}
+
+.specificationsLabelsTable tr td{
+    width: 16%;
+    border-style: double;
+    border-width: medium;
+}
+
+.specificationsLabelsTable tr td label{
+    width: 100%;
 }

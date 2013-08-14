@@ -7,9 +7,20 @@ namespace Cats
 {
     public partial class ListOfBreeds : Page
     {
+        private bool _admin;
+
+        protected void Page_PreInit(Object sender, EventArgs e)
+        {
+            _admin = Convert.ToBoolean(Request.QueryString["admin"]);
+            if (_admin)
+            {
+                MasterPageFile = "~/EditorFolder/Editor.Master";
+            }
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            var catBL = new CatBL();
+            var catBL = new CatBL(false);
             var catsList = catBL.GetAllCats();
             
             var dt = new DataTable();

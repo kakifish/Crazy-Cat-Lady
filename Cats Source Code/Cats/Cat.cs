@@ -8,81 +8,17 @@
         private string _bodyType;
         private string _coat;
         private string _pattern;
-        //////////////////unused??///////////////////
-        private string _wikipediaLink;
         private string _image;
         private string _info;
-        //////////////////unused??///////////////////
+        private string _change;
 
-        public Cat(string breed)
+        public Cat(string breed, string image)
         {
             _breed = breed;
-        }
-
-        public Cat(string breed, string country)
-        {
-            _breed = breed;
-            _country = country;
-        }
-
-        public Cat(string breed, string country, string origin)
-        {
-            _breed = breed;
-            _country = country;
-            _origin = origin;
-        }
-
-        public Cat(string breed, string country, string origin, string bodyType)
-        {
-            _breed = breed;
-            _country = country;
-            _origin = origin;
-            _bodyType = bodyType;
-        }
-
-        public Cat(string breed, string country, string origin, string bodyType, string coat)
-        {
-            _breed = breed;
-            _country = country;
-            _origin = origin;
-            _bodyType = bodyType;
-            _coat = coat;
-        }
-
-        public Cat(string breed, string country, string origin, string bodyType, string coat, string pattern)
-        {
-            _breed = breed;
-            _country = country;
-            _origin = origin;
-            _bodyType = bodyType;
-            _coat = coat;
-            _pattern = pattern;
-        }
-
-        public Cat(string breed, string country, string origin, string bodyType, string coat, string pattern, string wikipediaLink)
-        {
-            _breed = breed;
-            _country = country;
-            _origin = origin;
-            _bodyType = bodyType;
-            _coat = coat;
-            _pattern = pattern;
-            _wikipediaLink = wikipediaLink;
-        }
-
-        public Cat(string breed, string country, string origin, string bodyType, string coat, string pattern, string wikipediaLink, string image)
-        {
-            _breed = breed;
-            _country = country;
-            _origin = origin;
-            _bodyType = bodyType;
-            _coat = coat;
-            _pattern = pattern;
-            _wikipediaLink = wikipediaLink;
             _image = image;
         }
 
-        public Cat(string breed, string country, string origin, string bodyType, string coat, string pattern, string wikipediaLink, string image, string info)
+        public Cat(string breed, string country, string origin, string bodyType, string coat, string pattern, string image, string info)
         {
             _breed = breed;
             _country = country;
@@ -90,9 +26,21 @@
             _bodyType = bodyType;
             _coat = coat;
             _pattern = pattern;
-            _wikipediaLink = wikipediaLink;
             _image = image;
             _info = info;
+        }
+
+        public Cat(string breed, string country, string origin, string bodyType, string coat, string pattern, string image, string info, string change)
+        {
+            _breed = breed;
+            _country = country;
+            _origin = origin;
+            _bodyType = bodyType;
+            _coat = coat;
+            _pattern = pattern;
+            _image = image;
+            _info = info;
+            _change = change;
         }
 
         public string GetBreed()
@@ -149,15 +97,6 @@
             _pattern = pattern;
         }
 
-        public string GetWikipwdiaLink()
-        {
-            return _wikipediaLink;
-        }
-        public void SetWikipediaLink(string wikipediaLink)
-        {
-            _wikipediaLink = wikipediaLink;
-        }
-
         public string GetImage()
         {
             return _image;
@@ -174,6 +113,11 @@
         public void SetInfo(string info)
         {
             _info = info;
+        }
+
+        public string GetChange()
+        {
+            return _change;
         }
     }
 }
