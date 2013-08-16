@@ -21,7 +21,7 @@ namespace Cats
         
         private static string GetConnectionString()//good
         {
-            return "Data Source=KAKIFISH;Initial Catalog=CatsDB;Integrated Security=True";
+            return System.Configuration.ConfigurationManager.ConnectionStrings["CatsDB"].ConnectionString;
         }
 
         public Cat GetCat(string breed)

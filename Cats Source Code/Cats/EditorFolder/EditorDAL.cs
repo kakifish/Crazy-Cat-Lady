@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
 
 namespace Cats.EditorFolder
 {
@@ -10,7 +8,7 @@ namespace Cats.EditorFolder
     {
         private static string GetConnectionString()
         {
-            return "Data Source=KAKIFISH;Initial Catalog=CatsDB;Integrated Security=True";
+            return System.Configuration.ConfigurationManager.ConnectionStrings["CatsDB"].ConnectionString;
         }
 
         public Editor GetEditor(string userName)
